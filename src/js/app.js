@@ -78,7 +78,6 @@ function triggerAlert(msg) {
   }, 4000);
 }
 
-
 // ADD TASK
 // ========
 
