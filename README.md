@@ -4,4 +4,6 @@ This is a simple app built using vanilla JS
 
 ## Setup
 
-Simply clone the repository and open the index.html file
+-run `npm install` from the project root to install dev dependencies
+
+-run `gulp` from project root to compile srcs and launch browser

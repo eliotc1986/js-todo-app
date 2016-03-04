@@ -1,0 +1,35 @@
+{
+  "name": "todo-app-js",
+  "version": "1.0.0",
+  "description": "todo app built with pure js",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eliotc1986/js-todo-app.git"
+  },
+  "keywords": [
+    "js",
+    "todoapp"
+  ],
+  "author": "Elliott Hindman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eliotc1986/js-todo-app/issues"
+  },
+  "homepage": "https://github.com/eliotc1986/js-todo-app#readme",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.3.0",
+    "gulp-uglify": "^1.5.3",
+    "nib": "^1.1.0",
+    "rimraf": "^2.5.2",
+    "run-sequence": "^1.1.5"
+  }
+}

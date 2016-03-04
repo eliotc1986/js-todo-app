@@ -70,6 +70,9 @@ function createNewTask(taskString) {
 
 function addTask() {
   var str = taskInput.value.trim();
+  var hasClass = taskInput.classList.contains('alert');
+
+  if(hasClass) { taskInput.classList.remove('alert'); }
 
   if(str) {
     var listItem = createNewTask(taskInput.value);
@@ -78,7 +81,9 @@ function addTask() {
     taskInput.value = '';
     console.log("Task added");
   } else {
-    alert("Textfield cannot be blank");
+    taskInput.classList.add('alert');
+    taskInput.value = 'Be sure to type a task :0';
+    taskInput.select();
   }
 }
 
