@@ -4,7 +4,7 @@
   "description": "todo app built with pure js",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "gulp"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
