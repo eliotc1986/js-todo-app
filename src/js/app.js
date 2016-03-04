@@ -6,6 +6,7 @@ var taskInput;
 var addTaskBtn;
 var incompleteTasksList;
 var completedTasksList;
+var alertMsg;
 
 // SET-UP FUNCTIONS
 // ================
@@ -20,6 +21,7 @@ function cacheDom() {
   addTaskBtn = document.getElementById('add-task');
   incompleteTasksList = document.getElementById('incomplete-tasks');
   completedTasksList = document.getElementById('completed-tasks');
+  alertMsg = document.getElementById('error');
 }
 
 function bindEvents() {
@@ -64,6 +66,18 @@ function createNewTask(taskString) {
   return listItem;
 }
 
+// TRIGGER ALERT
+// =============
+
+function triggerAlert(msg) {
+  taskInput.classList.add('alert');
+  taskInput.select();
+  alertMsg.classList.add('fadeIn');
+  setTimeout(function() {
+    alertMsg.classList.remove('fadeIn');
+  }, 4000);
+}
+
 
 // ADD TASK
 // ========
@@ -81,9 +95,7 @@ function addTask() {
     taskInput.value = '';
     console.log("Task added");
   } else {
-    taskInput.classList.add('alert');
-    taskInput.value = 'Be sure to type a task :0';
-    taskInput.select();
+    triggerAlert("Be sure to..");
   }
 }
 

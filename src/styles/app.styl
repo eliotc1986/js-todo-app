@@ -3,7 +3,7 @@
 //- Basic Style
 body 
   background $white
-  color #333
+  color $black
   font-family $baseFontFamily
 
 .container
@@ -43,10 +43,10 @@ button:hover
 //- Heading
 h3
 label[for='new-task']
-  color #333
+  color $black
   font-weight 700
   font-size 15px
-  border-bottom 2px solid #333
+  border-bottom 2px solid $black
   padding 30px 0 10px
   margin 0
   text-transform uppercase
@@ -64,10 +64,23 @@ input[type="text"]
   color #888
 
 input[type="text"]:focus
-  color #333
+  color $black
 
 
 //- New Task
+.add-task
+  position relative
+  margin-bottom 20px
+
+  #error
+    color $alert
+    position absolute
+    width 100%
+    bottom -30px
+    left 0
+    opacity 0
+    transition opacity .3s
+
 label[for='new-task']
   display block
   margin 0 0 20px
@@ -127,3 +140,9 @@ ul li.editMode label
 .alert 
   outline none
   box-shadow 0 0 2px $alert !important
+
+//- Animation
+.fadeIn {
+  opacity 1 !important
+  transition all .3s
+}
