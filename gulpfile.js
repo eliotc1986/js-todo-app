@@ -16,13 +16,6 @@ gulp.task('clean', function(done) {
   rimraf('public', done);
 });
 
-gulp.task('server', function() {
-  browser.init({
-    server: '',
-    port: PORT
-  });
-});
-
 // Compile and Compress JS files
 gulp.task('javascript', function() {
   gulp.src([
@@ -48,6 +41,13 @@ gulp.task('stylus', function() {
     .pipe(browser.reload({ stream: true }));
 });
 
+gulp.task('server', function() {
+  browser.init({
+    server: './',
+    port: PORT
+  });
+});
+
 // Clean and compile tasks
 gulp.task('compile', function(done) {
     sequence('clean', ['javascript', 'stylus'], done);
@@ -57,7 +57,7 @@ gulp.task('compile', function(done) {
 gulp.task('default', ['compile', 'server'], function() {
   // Watch JS files
   gulp.watch(['src/js/*.js', 'src/js/**/*.js'], ['javascript']);
-  
+
   // Watch CSS files
   gulp.watch('src/styles/*.styl', ['stylus']);
 
